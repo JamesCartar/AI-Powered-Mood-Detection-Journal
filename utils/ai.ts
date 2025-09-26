@@ -118,10 +118,7 @@ export const qa = async (question, entries) => {
 
   const chain = loadQARefineChain(client);
   const res = await chain.call({ input_documents: relevantDocs, question });
-  console.log(
-    'final result >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>: ',
-    res.output_text
-  );
+  console.log('final result:', res.output_text);
   return res.output_text;
 };
 

@@ -16,9 +16,7 @@ const Question = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log('Submitting question:', value);
     const answer = await askQuestion(value);
-    console.log('Received answer:', answer);
 
     setResponse(answer);
     setValue('');

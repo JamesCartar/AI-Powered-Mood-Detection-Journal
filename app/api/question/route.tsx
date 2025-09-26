@@ -17,7 +17,7 @@ export const POST = async (req: Request) => {
     },
   });
   const answer = await qa(question, entries);
-  console.log('Final answer <<<<<<<<<<<<<<<<<<<<<<<<:', answer);
+  console.log('Final answer: ', answer);
 
   return NextResponse.json({ data: answer }, { status: 200 });
 };
