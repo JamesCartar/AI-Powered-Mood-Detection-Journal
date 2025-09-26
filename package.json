@@ -7,11 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest"
+    "test": "node --loader ts-node/esm node_modules/vitest/vitest.mjs --config vitest.config.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.20.0",
     "@clerk/types": "^4.20.0",
+    "@langchain/openai": "^0.6.13",
     "@prisma/client": "^4.15.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -19,11 +20,11 @@
     "@types/react": "18.2.11",
     "@types/react-dom": "18.2.4",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "langchain": "^0.0.95",
     "autoprefixer": "10.4.14",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
     "jsdom": "^22.1.0",
-    "langchain": "^0.0.92",
     "next": "13.4.5",
     "postcss": "8.4.24",
     "react": "18.2.0",
